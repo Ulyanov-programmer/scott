@@ -1,0 +1,57 @@
+<x-layout title='Scott locations'
+          typed='false'
+          burgerMenu='true'
+          spoiler='false'
+          animateByScroll='false'
+          parallax='false'>
+
+  <push name='styles'></push>
+  <push name='scripts'>
+    <script src='./scripts/scripts.js'
+            defer></script>
+  </push>
+
+  <fill:header></fill:header>
+
+  <x-mini-header title='Locations'></x-mini-header>
+
+  <div class='m-map is-centered-content is-top-paddings'>
+    <div class='map-image is-contain-img'>
+      <img class='default-map'
+           src='img/map.png'
+           alt='world map'>
+      <img class='mobile-map'
+           src='img/map-mobile.png'
+           alt='world map'>
+    </div>
+
+    <div class='location-block'
+         rel='noopener noreferrer'>
+      New York
+    </div>
+    <div class='location-block'
+         rel='noopener noreferrer'>
+      London
+    </div>
+    <div class='location-block'
+         rel='noopener noreferrer'>
+      Jakarta
+    </div>
+    <div class='location-block'
+         rel='noopener noreferrer'>
+      Yokohama
+    </div>
+  </div>
+
+  <section class='m-city-not-listed is-centered-content is-block-paddings'>
+    <h2 class='title'>Your city not listed?</h2>
+    <p class='text'>If you’d like to see Scoot in your hometown, be sure to let us know. We track requests and plan launches based on demand. Feel free to message us by clicking the link or messaging
+      us on social.</p>
+
+    <button class='m-button'
+            type='button'>
+      Message Us
+    </button>
+  </section>
+  <fill:footer></fill:footer>
+</x-layout>

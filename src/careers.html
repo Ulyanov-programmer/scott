@@ -1,0 +1,115 @@
+<x-layout title='Scott Careers'
+          typed='false'
+          burgerMenu='true'
+          spoiler='false'
+          animateByScroll='true'
+          parallax='false'>
+
+  <push name='styles'></push>
+  <push name='scripts'>
+    <script src='./scripts/scripts.js'
+            defer></script>
+    <script src='./scripts/careersAnimations.js'
+            type='module'></script>
+  </push>
+
+  <fill:header></fill:header>
+
+  <x-mini-header title='Careers'></x-mini-header>
+
+  <section class='m-styled-section is-top-paddings'>
+    <div class='body is-centered-content'>
+      <div class='main'>
+        <h2 class='title'> Care to join our mission? </h2>
+        <p class='text'> We’re always looking for ambitious individuals to help us on our journey. If you’re passionate about our mission to provide clean, accessible transport to improve urban living
+          we want to hear from you! </p>
+        <a href='#'
+           target='_self'
+           class='m-button ref'>Say Hello</a>
+      </div>
+
+      <div class='decor-image is-contain-img'>
+        <img alt=''
+             src='img/decor/decor-image-4.png'>
+      </div>
+      <div class='decor-circle is-contain-img'>
+        <img alt=''
+             src='img/decor/decor-circle.svg'
+             loading='lazy'>
+      </div>
+      <div class='decor-arrow'>
+        <img alt=''
+             src='img/decor/arrow-left.svg'
+             loading='lazy'>
+      </div>
+    </div>
+  </section>
+
+  <section class='m-arguments is-top-paddings is-centered-content'
+           id='arguments'>
+    <h2 class='title'>Why join us?</h2>
+
+    <div class='main'>
+      <article class='m-argument'
+               id='argument-pc-left'>
+        <div class='image is-contain-img'>
+          <img alt=''
+               src='img/decor/argument-1.png'
+               loading='lazy'>
+          <div class='number-of-argument'
+               aria-label='argument number 1'>01</div>
+        </div>
+        <h3 class='title'>Our tech</h3>
+        <p class='text'>We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!</p>
+      </article>
+      <article class='m-argument'
+               id='argument-pc-center'>
+        <div class='image is-contain-img'>
+          <img alt=''
+               src='img/decor/argument-2.png'
+               loading='lazy'>
+          <div class='number-of-argument'
+               aria-label='argument number 2'>02</div>
+        </div>
+        <h3 class='title'>Our integrity</h3>
+        <p class='text'>We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!</p>
+      </article>
+      <article class='m-argument'
+               id='argument-pc-right'>
+        <div class='image is-contain-img'>
+          <img alt=''
+               src='img/decor/argument-3.png'
+               loading='lazy'>
+          <div class='number-of-argument'
+               aria-label='argument number 3'>03</div>
+        </div>
+        <h3 class='title'>Our community</h3>
+        <p class='text'>We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!</p>
+      </article>
+    </div>
+  </section>
+
+  <section class='m-jobs is-centered-content is-block-paddings'>
+    <article class='m-job'>
+      <h4 class='position'>General Manager</h4>
+      <span class='location'>Jakarta, Indonesia</span>
+      <a class='m-button apply-ref'
+         href='#'
+         target='_blank'
+         rel='noopener noreferrer'>
+        Apply
+      </a>
+    </article>
+    <article class='m-job'>
+      <h4 class='position'>UI/UX Designer</h4>
+      <span class='location'>Yokohama, Japan</span>
+      <a class='m-button apply-ref'
+         href='#'
+         target='_blank'
+         rel='noopener noreferrer'>
+        Apply
+      </a>
+    </article>
+  </section>
+  <fill:footer></fill:footer>
+</x-layout>

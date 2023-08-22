@@ -1,0 +1,117 @@
+:root {
+  /* It is installed automatically by the script for working with the burger menu. */
+  --burgerMarginTop: 0.1px;
+}
+
+@custom-media --burgerMenuIsHidden (width > 700px);
+@custom-media --burgerMenuIsVisible (width <= 701px);
+
+.burger-menu {
+  position: fixed;
+  z-index: 4 !important;
+  top: 0;
+  right: 0;
+  transform: translate3d(100vw, 0, 0);
+
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr minmax(256px, 256px);
+
+  width: 100vw;
+
+  /* Sets the height of the menu, taking into account the offset from the header */
+  min-height: calc(100vh - var(--burgerMarginTop));
+  margin-top: var(--burgerMarginTop);
+
+  transition: all 0.3s ease;
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  & .shadow-block {
+    background: rgb(0 0 0 / 70%);
+  }
+
+  & .body {
+    overflow-y: auto;
+    display: grid;
+    align-content: space-between;
+    justify-items: end;
+
+    height: calc(100vh - var(--burgerMarginTop));
+    padding: 24px 32px;
+
+    background: #333a44;
+  }
+
+  ul {
+    display: grid;
+    gap: 15px;
+    align-content: start;
+    justify-items: end;
+    margin-bottom: 15px;
+
+    li {
+      a,
+      button {
+        padding: 10px;
+        font-size: pxRem(18px);
+        font-weight: 700;
+        color: var(--snow-color);
+      }
+    }
+  }
+
+  @media (--burgerMenuIsHidden) {
+    display: none;
+  }
+}
+
+.burger-btn {
+  z-index: 5;
+  display: block;
+  margin-left: auto;
+
+  svg {
+    > rect {
+      transition: all 0.3s ease;
+    }
+  }
+
+  &.active {
+    svg {
+      .burger-btn__rect {
+        &-top {
+          transform-origin: center;
+          transform-box: fill-box;
+          transform: rotate(45deg);
+
+          y: 40%;
+        }
+
+        &-center {
+          @mixin hide;
+        }
+
+        &-bottom {
+          transform-origin: center;
+          transform-box: fill-box;
+          transform: rotate(-45deg);
+
+          y: 40%;
+        }
+      }
+    }
+  }
+
+  @media (--burgerMenuIsHidden) {
+    display: none;
+  }
+}
+
+.m-navmenu {
+  @media (--burgerMenuIsVisible) {
+    display: none;
+  }
+}

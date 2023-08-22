@@ -1,0 +1,226 @@
+<script props>
+  module.exports = {
+    // Set the main language of pages below.
+    lang: 'en',
+    // Set the title of the index page below.
+    title: props.title || 'Scott',
+    // Set a name for a preloaded font. Must be a file name without extension.
+    preloadedFontName: 'SpaceMono-Bold',
+    justValidate: props.justValidate,
+    swiper: props.swiper,
+    typed: props.typed,
+    photoSwipe: props.photoSwipe,
+    noUiSlider: props.noUiSlider,
+    burgerMenu: props.burgerMenu,
+    formStyles: props.formStyles,
+    sidebar: props.sidebar,
+    spoiler: props.spoiler,
+    submenu: props.submenu,
+    animateByScroll: props.animateByScroll,
+    swipe: props.swipe,
+    horizontalScroll: props.horizontalScroll,
+    dialogs: props.dialogs,
+    parallax: props.parallax,
+    autoScrollPadding: props.autoScrollPadding,
+    tabs: props.tabs,
+    stepByStep: props.stepByStep,
+    styles: isArray(props.styles) ? props.styles : [],
+    scripts: isObject(props.scripts) ? props.scripts : {},
+  }
+</script>
+<!DOCTYPE html>
+<html lang={{lang}}>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible'
+        content='IE=edge'>
+  <meta name='viewport'
+        content='width=device-width, initial-scale=1.0'>
+  <!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->
+  <!-- Disables forced link for phone number on iOS -->
+  <meta name='format-detection'
+        content='telephone=no'>
+  <meta name='description'
+        content='description'>
+  <meta name='theme-color'
+        content='#000000'>
+  <link rel='icon'
+        href='./img/favicon.svg'>
+  <link rel='mask-icon'
+        href='./img/favicon.svg'
+        color='#000000'>
+  <!-- <link rel='apple-touch-icon' href='apple-touch-icon.png'> -->
+  <!-- <link rel='manifest' href='manifest.json'> -->
+
+  <if condition='preloadedFontName != "none"'>
+    <link rel='preload'
+          href='./fonts/{{ preloadedFontName }}.woff2'
+          as='font'
+          type='font/woff2'
+          crossorigin>
+  </if>
+  <title> {{ title }} </title>
+  <!-- /-/ General stylesheets -->
+  <link rel='stylesheet'
+        href='./styles/general/fonts.css'>
+  <link rel='stylesheet'
+        href='./styles/animations.css'>
+  <link rel='stylesheet'
+        href='./styles/base.css'>
+  <link rel='stylesheet'
+        href='./styles/layout.css'>
+  <link rel='stylesheet'
+        href='./styles/module.css'>
+  <link rel='stylesheet'
+        href='./styles/state.css'>
+  <link rel='stylesheet'
+        href='./styles/theme.css'>
+  <!-- /-/ General scripts -->
+
+  <if condition='justValidate'>
+    <!-- JustValidate -->
+    <script type='module'
+            src='./scripts/justValidate.js'></script>
+  </if>
+
+  <if condition='swiper'>
+    <!-- Swiper -->
+    <link rel='stylesheet'
+          href='./libs/swiper/swiper-bundle.min.css'>
+    <script type='module'
+            src='./scripts/sliders.js'></script>
+  </if>
+
+  <if condition='typed'>
+    <!-- Typed -->
+    <script defer
+            src='./libs/typed.min.js'></script>
+    <script defer
+            src='./scripts/typed.js'></script>
+  </if>
+
+  <if condition='photoSwipe'>
+    <!-- PhotoSwipe -->
+    <script type='module'
+            src='./scripts/photoSwipe.js'></script>
+    <link rel='stylesheet'
+          href='./libs/photoswipe/photoswipe.css'>
+  </if>
+
+  <if condition='noUiSlider'>
+    <!-- NoUiSlider -->
+    <link href='./libs/nouislider/nouislider.min.css'
+          rel='stylesheet'>
+    <script type='module'
+            src='./scripts/nouislider.js'></script>
+  </if>
+
+  <if condition='burgerMenu'>
+    <!-- BurgerMenu -->
+    <script type='module'
+            src='./scripts/burgerMenu.js'></script>
+    <link rel='stylesheet'
+          href='./styles/modules/burgerMenu.css'>
+  </if>
+
+  <if condition='formStyles'>
+    <!-- Form styles -->
+    <link rel='stylesheet'
+          href='./styles/modules/form.css'>
+  </if>
+
+  <if condition='sidebar'>
+    <!-- Sidebar -->
+    <script type='module'
+            src='./scripts/sidebar.js'></script>
+    <link rel='stylesheet'
+          href='./styles/modules/sidebar.css'>
+  </if>
+
+  <if condition='spoiler'>
+    <!-- Spoiler -->
+    <script type='module'
+            src='./scripts/spoiler.js'></script>
+    <link rel='stylesheet'
+          href='./styles/modules/spoiler.css'>
+  </if>
+
+  <if condition='submenu'>
+    <!-- Submenu -->
+    <script type='module'
+            src='./scripts/submenu.js'></script>
+    <link rel='stylesheet'
+          href='./styles/modules/submenu.css'>
+  </if>
+
+  <if condition='animateByScroll'>
+    <!-- Animate by scroll -->
+    <script type='module'
+            src='./scripts/animateByScroll.js'></script>
+  </if>
+
+  <if condition='swipe'>
+    <!-- Swipe -->
+    <script type='module'
+            src='./scripts/swipe.js'></script>
+  </if>
+
+  <if condition='horizontalScroll'>
+    <!-- Horizontal scroll -->
+    <script type='module'
+            src='./scripts/horizontalScroll.js'></script>
+  </if>
+
+  <if condition='dialogs'>
+    <!-- For dialogs -->
+    <link rel='stylesheet'
+          href='./styles/modules/dialogs.css'>
+    <script type='module'
+            src='./scripts/dialogs.js'></script>
+  </if>
+
+  <if condition='parallax'>
+    <!-- Parallax -->
+    <script type='module'
+            src='./scripts/parallax.js'></script>
+  </if>
+
+  <if condition='autoScrollPadding'>
+    <!-- Scroll to element -->
+    <script type='module'
+            src='./scripts/autoScrollPadding.js'></script>
+  </if>
+
+  <if condition='tabs'>
+    <!-- Tabs -->
+    <script type='module'
+            src='./scripts/tab.js'></script>
+  </if>
+
+  <if condition='stepByStep'>
+    <!-- StepByStep -->
+    <script type='module'
+            src='./scripts/stepByStepBlock.js'></script>
+  </if>
+  <!-- /-/ Other stylesheets and scripts for this page -->
+  <stack name='styles'></stack>
+  <stack name='scripts'></stack>
+</head>
+
+<body class='is-hidden-scrollbar'>
+
+  <if condition='$slots.header?.filled'>
+    <x-header></x-header>
+  </if>
+
+  <main>
+    <yield></yield>
+  </main>
+
+  <if condition='$slots.footer?.filled'>
+    <x-footer></x-footer>
+  </if>
+</body>
+
+</html>

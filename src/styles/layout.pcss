@@ -1,0 +1,103 @@
+.l-header {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: clamp(20px, pxToVw(50, $layoutWidth), 60px);
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  background: var(--background);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
+
+  & .get-button {
+    &_in-burger {
+      display: block;
+    }
+
+    @media (width <= 701px) {
+      display: none;
+    }
+  }
+}
+.l-footer {
+  color: var(--snow-color);
+
+  & .top {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 0;
+    gap: 50px;
+    background: #495567;
+    padding-block: clamp(30px, pxToVw(100, $layoutWidth), 102px);
+
+    @media (--isTablet) {
+      flex-flow: column nowrap;
+      gap: 30px;
+      justify-content: center;
+      text-align: center;
+    }
+    @media (--isMobile) {
+      flex-flow: column nowrap;
+      gap: 30px;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  & .title {
+  }
+
+  & .download-refs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:focus-visible {
+        filter: contrast(120%);
+      }
+    }
+  }
+
+  & .bottom {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 40px;
+
+    background: #333a44;
+    padding-block: 25px;
+  }
+
+  & .socials {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  & .social {
+    padding: 10px;
+  }
+
+  & .decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+    pointer-events: none;
+  }
+}

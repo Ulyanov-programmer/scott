@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:active {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 1px solid;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  font-size: 100%;
+  line-height: 1;
+  text-size-adjust: 100%;
+
+  -webkit-tap-highlight-color: #0000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+
+  font-size: inherit;
+  line-height: 1;
+  color: inherit;
+
+  background: none;
+  outline-color: transparent;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input {
+  width: fit-content;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+select {
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+  appearance: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 700;
+  color: var(--black-text-color);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(pxrem(40px), pxToVw(56, $layoutWidth) + 0.1rem, pxrem(56px));
+  letter-spacing: -2.5px;
+}
+
+h2 {
+  font-size: clamp(pxrem(32px), pxToVw(48, $layoutWidth) + 0.1rem, pxrem(48px));
+  letter-spacing: -2.2px;
+}
+
+h3 {
+  font-size: clamp(pxrem(24px), pxToVw(40, $layoutWidth) + 0.1rem, pxrem(40px));
+  letter-spacing: -1.786px;
+}
+
+h4 {
+  font-size: clamp(pxrem(20px), pxToVw(24, $layoutWidth) + 0.1rem, pxrem(24px));
+  letter-spacing: -1.071px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+address {
+  font-style: normal;
+}
+
+body {
+  height: max-content;
+
+  font-family: var(--main-font-family);
+  font-size: clamp(
+    pxRem($minFontSize),
+    pxToVw($mainFontSize, $layoutWidth),
+    pxRem($mainFontSize)
+  );
+  color: var(--main-text-color);
+
+  background: var(--background);
+}
+.text {
+  font-family: var(--lexend-deca-font);
+}
+:root {
+  --main-font-family: spacemono;
+  --main-text-color: #939caa;
+  --black-text-color: #495567;
+  --gray-color: #939caa;
+  --gray-light-color: #e5ecf4;
+  --snow-color: #f2f5f9;
+  --white-color: #fff;
+  --yellow: #fcb72b;
+  --yellow-light: #fff4df;
+  --background: white;
+  --header-mobile-height: 55px;
+
+  /* ? Paddings for site content assigned via the _centered-content class. */
+
+  /* Paddings for site content, in a large viewport. */
+  --big-viewport-content-inline-padding: 12vw;
+
+  /* Paddings for site content, in a PC viewport. */
+  --pc-content-inline-padding: 10vw;
+
+  /* Paddings for site content, in a tablet viewport. */
+  --tablet-content-inline-padding: 7vw;
+
+  /* Paddings for site content, in a smartphone viewport. */
+  --mobile-content-inline-padding: 5vw;
+}

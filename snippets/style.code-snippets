@@ -1,0 +1,445 @@
+{
+	"arbitrary media query for stylus with braces": {
+		"scope": "sass, stylus, css",
+		"prefix": "med",
+		"body": [
+			"@media (max-width: ${1}px) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"arbitrary media query from min-width for stylus with braces": {
+		"scope": "sass, stylus, css",
+		"prefix": "medMin",
+		"body": [
+			"@media (min-width: ${1}px) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"media query for mobiles with braces": {
+		"scope": "sass, stylus, css",
+		"prefix": "medMobiles",
+		"body": [
+			"@media (max-width: 426px) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"media query for tablets stylus with braces": {
+		"scope": "sass, stylus, css",
+		"prefix": "medTablets",
+		"body": [
+			"@media (max-width: 768px) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"border property": {
+		"scope": "sass, stylus, css",
+		"prefix": "bor",
+		"body": [
+			"border: $1px ${2|solid,dashed,dotted,inset|} #${3:}",
+		],
+	},
+	"box-shadow": {
+		"scope": "sass, stylus, css",
+		"prefix": "bsh",
+		"body": [
+			"box-shadow: ${1:xRight} ${2:yDown} ${3:blur}px rgba(0,0,0,0.${0:color})",
+		],
+	},
+	"flex-flow": {
+		"scope": "sass, stylus, css",
+		"prefix": "ffl",
+		"body": [
+			"flex-flow: ${1|column,row,column-reverse,row-reverse|} ${2|nowrap,wrap|}",
+		],
+	},
+	"background image": {
+		"scope": "css",
+		"prefix": "bgi",
+		"body": [
+			"background: url('../img/$0') no-repeat center / cover;",
+		],
+	},
+	"A mixin for embedding several types of background images": {
+		"scope": "sass",
+		"prefix": "bgi",
+		"body": [
+			"+bg-img-multi-type('../img/$1', ${2|no-repeat,repeat|} ${3|center,0px 0px|} / ${4|contain,cover,0% 0%|})"
+		],
+	},
+	"flex property": {
+		"scope": "sass, stylus, css",
+		"prefix": "fl",
+		"body": [
+			"flex: ${1:canBigger} ${2:canSmaller} ${0:defaultSize}",
+		],
+	},
+	"stylus variable": {
+		"scope": "stylus",
+		"prefix": "var",
+		"body": [
+			"$${1:varName} = ${0:value};",
+		],
+	},
+	"sass variable": {
+		"scope": "sass",
+		"prefix": "var",
+		"body": [
+			"$${1:varName}: ${0:value}",
+		],
+	},
+	"css variable": {
+		"scope": "stylus, css",
+		"prefix": "cvar",
+		"body": [
+			"--${1:varName}: $0;",
+		],
+	},
+	"include some css var": {
+		"scope": "sass, stylus, css",
+		"prefix": "evar",
+		"body": [
+			"var(--$0)",
+		],
+	},
+	"hover": {
+		"scope": "sass, stylus, css",
+		"prefix": "hov",
+		"body": [
+			"&:hover",
+			"\t$0",
+		],
+	},
+	"active": {
+		"scope": "sass, stylus",
+		"prefix": "act",
+		"body": [
+			"&:active",
+			"\t$0",
+		],
+	},
+	"focus": {
+		"scope": "sass, stylus",
+		"prefix": "foc",
+		"body": [
+			"&:focus",
+			"\t$0",
+		],
+	},
+	"hover and focus": {
+		"scope": "sass, stylus",
+		"prefix": "hovf, hf",
+		"body": [
+			"&:hover, &:focus",
+			"\t$0",
+		],
+	},
+	"active class, hover and focus": {
+		"scope": "sass, stylus",
+		"prefix": "ahovf",
+		"body": [
+			"&.active, &:hover, &:focus",
+			"\t$0",
+		],
+	},
+	"before pseudoelement": {
+		"scope": "sass, stylus",
+		"prefix": "befor",
+		"body": [
+			"&:before",
+			"\t$0",
+			"\tcontent: ${1|'',url('../img/')|}",
+		],
+	},
+	"after pseudoelement": {
+		"scope": "sass, stylus",
+		"prefix": "afte",
+		"body": [
+			"&:after",
+			"\t$0",
+			"\tcontent: ${1|'',url('../img/')|}",
+		],
+	},
+	"size of element (mixin)": {
+		"scope": "sass",
+		"prefix": ["size", "bsize"],
+		"body": [
+			"+block-size(${1:width}, ${0:height})",
+		],
+		"description": "width and height of object"
+	},
+	"transition property": {
+		"scope": "sass, stylus, css",
+		"prefix": "trn",
+		"body": [
+			"transition: all $0s ease",
+		],
+	},
+	"last child": {
+		"scope": "sass, stylus",
+		"prefix": "lc",
+		"body": [
+			">:last-child",
+			"\t$0",
+		],
+	},
+	"first child": {
+		"scope": "sass, stylus",
+		"prefix": "fc",
+		"body": [
+			">:first-child",
+			"\t$0",
+		],
+	},
+	"adaptive font size": {
+		"scope": "sass",
+		"prefix": "afz",
+		"body": [
+			"font-size: adaptiveFontSize(${1:layoutSize}, ${0:min-size})",
+		],
+	},
+	"font property": {
+		"scope": "sass",
+		"prefix": "font",
+		"body": [
+			"font: adaptiveFontSize(${1:layoutSize}, ${2:min-size}) ${0:fontFamily}",
+		],
+	},
+	"adaptive property function": {
+		"scope": "sass",
+		"prefix": "aprop",
+		"body": [
+			"adaptiveProperty(${2:value}, ${0:min-value})",
+		],
+	},
+	"color": {
+		"scope": "sass, stylus, css",
+		"prefix": "col",
+		"body": [
+			"color: $0",
+		],
+	},
+	"transform translate 3D": {
+		"scope": "sass, stylus, css",
+		"prefix": [
+			"trmtranslate",
+			"translate"
+		],
+		"body": [
+			"transform: translate3d(${1:xRight}, ${0:yDown}, 0)",
+		],
+	},
+	"transform scale": {
+		"scope": "sass, stylus, css",
+		"prefix": [
+			"trmscale",
+			"scale"
+		],
+		"body": [
+			"transform: scale(${1:xCoeff}, ${0:yCoeff})",
+		],
+	},
+	"transform rotate": {
+		"scope": "sass, stylus, css",
+		"prefix": [
+			"trmrotate",
+			"rotate"
+		],
+		"body": [
+			"transform: rotate(${0:degrees}deg)",
+		],
+	},
+	"transform property": {
+		"scope": "sass, stylus, css",
+		"prefix": "trm",
+		"body": [
+			"transform: ${1|translate(xy), scale(xy), rotate(deg)|}",
+		],
+	},
+	"absolute block centring": {
+		"scope": "sass, stylus, css",
+		"prefix": "acenter",
+		"body": [
+			"top: 50%",
+			"left: 50%",
+			"transform: translate(-50%, -50%)",
+		],
+	},
+	"grid-template property": {
+		"scope": "sass, stylus, css",
+		"prefix": "gt",
+		"body": [
+			"grid-template: '${2:rowEls}' ${0:rowSize} / ${1:columnCountAndSize}",
+		],
+	},
+	"grid-template - row in property": {
+		"scope": "sass, stylus, css",
+		"prefix": "gtr",
+		"body": [
+			"'${1:rowEl}' ${0:rowSize}",
+		],
+	},
+	"grid wrap construction": {
+		"scope": "sass, stylus, css",
+		"prefix": "gridwrap",
+		"body": [
+			"grid-template-columns: repeat(auto-fill, minmax(${1:min}, ${0:max}))",
+		],
+	},
+	"placeholder constuction": {
+		"scope": "sass, stylus",
+		"prefix": "place",
+		"body": [
+			"&::placeholder",
+			"\t$0",
+		],
+	},
+	"not last child constuction": {
+		"scope": "sass, stylus",
+		"prefix": "nlc",
+		"body": [
+			">*",
+			"\t&:not(:last-child)",
+			"\t\t$0",
+		],
+	},
+	"margin for all childs, but not for last (mixin)": {
+		"scope": "sass",
+		"prefix": "nlcm",
+		"body": [
+			"+notLastChildMargin(${0:values})",
+		],
+	},
+	"margin-right for all childs but not for last (mixin)": {
+		"scope": "sass",
+		"prefix": "nlcr",
+		"body": [
+			"+notLastChildMargin(0 ${0:value}px 0 0)",
+		],
+	},
+	"margin-bottom for all childs but not for last (mixin)": {
+		"scope": "sass",
+		"prefix": "nlcb",
+		"body": [
+			"+notLastChildMargin(0 0 ${0:value}px 0)",
+		],
+	},
+	"BEM subclass": {
+		"scope": "sass, stylus",
+		"prefix": "sclass",
+		"body": [
+			"&__${1:class}",
+			"\t$0",
+		],
+	},
+	"all for position-sticky": {
+		"scope": "sass, stylus, css",
+		"prefix": "posst",
+		"body": [
+			"position: sticky;",
+			"top: $0;",
+		],
+		"description": "all for position-sticky"
+	},
+	"flex-set mixin": {
+		"scope": "sass",
+		"prefix": "df",
+		"body": [
+			"+flex-set(${1|row,column,column-reverse,row-reverse|}, ${2|nowrap,wrap|})",
+		],
+	},
+	"grid-content-position": {
+		"scope": "sass, stylus, css",
+		"prefix": "gcp",
+		"body": [
+			"place-content: ${1:align-items} ${0:justify-items}",
+		],
+	},
+	"blurred borders": {
+		"scope": "sass",
+		"prefix": "bblur",
+		"body": [
+			"position: relative",
+			"&:before",
+			"\tposition: absolute",
+			"\ttop: 0",
+			"\tleft: 0",
+			"\tblock-size: 100%",
+			"\tz-index: 2",
+			"\tbox-shadow: 0 0 15px rgba(0, 0, 0, 0.2)",
+			"\tborder: 1px solid #fff",
+			"\tfilter: blur(3px)",
+			"\tcontent: ''",
+		],
+	},
+	"selector for first elements of a block": {
+		"scope": "sass, stylus",
+		"prefix": "fels",
+		"body": [
+			">*",
+			"\t$0",
+		],
+	},
+	"active (not pseudo-class) selector for class": {
+		"scope": "sass, stylus",
+		"prefix": "sactive",
+		"body": [
+			"&.active",
+			"\t$0",
+		],
+	},
+	"font size in rem": {
+		"scope": "sass",
+		"prefix": "fz",
+		"body": [
+			"font-size: rem($0)",
+		],
+	},
+	"flex-centring properties": {
+		"scope": "sass, stylus, css",
+		"prefix": "fcenter",
+		"body": [
+			"justify-content: center",
+			"align-items: center",
+		],
+	},
+	"props for styling scrollbar": {
+		"scope": "sass, stylus",
+		"prefix": "scrollbar",
+		"body": [
+			"// 'auto', 'thin' or other value.",
+			"scrollbar-width: thin",
+			"// button / track",
+			"scrollbar-color: blue orange",
+			"&::-webkit-scrollbar",
+			"\twidth: auto",
+			"&::-webkit-scrollbar-track",
+			"\t// track color",
+			"\tbackground: orange",
+			"&::-webkit-scrollbar-thumb",
+			"\t// button color",
+			"\tbackground-color: blue",
+			"\t// round, round, round...",
+			"\tborder-radius: 20px",
+			"\t// ...padding",
+			"\tborder: 0px solid orange",
+		],
+	},
+	"background gradient": {
+		"scope": "sass, stylus, css",
+		"prefix": "bggrad",
+		"body": [
+			"background: ${1|linear,radial,conic|}-gradient($2deg, ${3:color}, ${0:color})",
+		],
+	},
+	"The mixin simulating inset property with position": {
+		"scope": "sass",
+		"prefix": "advposition",
+		"body": [
+			"+advansedPosition(${1:fixed}, ${2:auto}, ${3:auto}, ${4:auto}, ${5:auto})",
+		],
+	},
+}
