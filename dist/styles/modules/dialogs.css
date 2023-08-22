@@ -1,0 +1,25 @@
+dialog[data-modal-dialog] {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: white;
+  text-align: center;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+dialog[data-modal-dialog][open] {
+  opacity: 1;
+  overflow: auto;
+  pointer-events: all;
+}
+
+dialog[data-modal-dialog]::backdrop {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.3);
+}

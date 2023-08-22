@@ -1,0 +1,113 @@
+@media (min-width: 1441px) {
+
+  .is-centered-content {
+    padding-inline: var(--big-viewport-content-inline-padding)
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+
+  .is-centered-content {
+    padding-inline: var(--pc-content-inline-padding)
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+
+  .is-centered-content {
+    padding-inline: var(--tablet-content-inline-padding)
+  }
+}
+
+@media (max-width: 426px) {
+
+  .is-centered-content {
+    padding-inline: var(--mobile-content-inline-padding)
+  }
+}
+
+.is-contain-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.is-cover-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.is-thin {
+  font-weight: 100;
+}
+
+.is-extra-light {
+  font-weight: 200;
+}
+
+.is-light {
+  font-weight: 300;
+}
+
+.is-medium {
+  font-weight: 500;
+}
+
+.is-semi-bold {
+  font-weight: 600;
+}
+
+.is-bold {
+  font-weight: 700;
+}
+
+.is-extra-bold {
+  font-weight: 800;
+}
+
+.is-black {
+  font-weight: 900;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+.is-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+}
+
+.is-hidden-scrollbar {
+  scrollbar-width: none;
+}
+
+.is-hidden-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.is-white-color {
+  color: var(--snow-color);
+}
+
+.is-white-color > * {
+  color: var(--snow-color);
+}
+
+.is-block-paddings {
+  padding-block: clamp(120px, calc(150 * 100vw / 1440), 150px);
+}
+
+.is-top-paddings {
+  padding-top: clamp(120px, calc(150 * 100vw / 1440), 150px);
+}

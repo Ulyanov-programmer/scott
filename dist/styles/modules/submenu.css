@@ -1,0 +1,35 @@
+.submenu-wrapper {
+  position: relative;
+}
+
+.submenu-menu {
+  z-index: 1;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  width: -moz-max-content;
+  width: max-content;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.submenu-menu.show {
+  opacity: 1;
+  overflow: auto;
+  pointer-events: all;
+}
+
+.submenu-menu_to-left {
+  right: 0;
+}
+
+.submenu-menu_to-right {
+  left: 0;
+}
+
+.submenu-menu_center {
+  left: 50%;
+  transform: translate(-50%, 0);
+}

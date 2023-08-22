@@ -1,0 +1,79 @@
+form {
+}
+
+fieldset {
+}
+
+label {
+  cursor: pointer;
+}
+
+input {
+  /* &:disabled {} */
+  /* &:invalid {} */
+  /* &::placeholder {} */
+}
+
+/* input[type="text"] {} */
+
+/* input[type="email"] {} */
+
+/* input[type="tel"] {} */
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="radio"] + label svg, input[type="checkbox"] + label svg {
+}
+
+input[type="radio"]:checked + label svg, input[type="checkbox"]:checked + label svg {
+}
+
+input[type="checkbox"] {
+}
+
+input[type="radio"] {
+}
+
+input[type="file"] {
+  display: none;
+  /* & + label {} */
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  scrollbar-width: none;
+  /* &::placeholder {} */
+}
+
+textarea::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+input[type="password"] {
+  font-family: caption;
+}

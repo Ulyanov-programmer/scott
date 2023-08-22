@@ -1,0 +1,37 @@
+.spoiler {
+  justify-items: start;
+  padding: 15px clamp(20px, calc(40 * 100vw / 1440), 40px);
+  text-align: left;
+  background: var(--snow-color);
+  transition: all 0.3s ease;
+}
+
+.spoiler-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 15px;
+  width: 100%;
+  padding-block: 15px;
+  font-size: clamp(20px, calc(24 * 100vw / 1440), 24px);
+  font-weight: 700;
+  color: var(--black-text-color);
+}
+
+.spoiler-button::after {
+  content: url("../../img/decor/spoiler-arrow.svg");
+  transform-origin: center center;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.spoiler-button.active::after {
+  transform: scale(-1, -1) translate(-1px);
+}
+
+.spoiler-content.active {
+}
+
+.spoiler .text {
+}
