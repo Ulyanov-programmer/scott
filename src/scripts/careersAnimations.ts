@@ -1,93 +1,74 @@
-import AnimateByScroll, { AnimationGroup, AnimationTimeline, AnimationTimelineMediaQuery } from './modules/animateByScroll.src.js'
+import ObserverTools, { TypedAnimationTimeline, TypedViewTimeline, } from './modules/observerTools.src.js'
 
-let argsTimeline = new ViewTimeline({
-  subject: document.querySelector('#arguments'),
+let argsTimeline = new TypedViewTimeline({
+  subject: '#arguments',
 })
-let argsMainTimeline = new ViewTimeline({
-  subject: document.querySelector('#arguments .main'),
+let argsMainTimeline = new TypedViewTimeline({
+  subject: '#arguments .main',
 })
 
-new AnimateByScroll(
-  { repeatingAnimations: false, activeAnimationClass: 'active' },
+new ObserverTools(
+  { repeatObserve: false, isIntersectedClass: 'is-intersecting' },
 
-  new AnimationTimeline({
+  //? Arguments
+  new TypedAnimationTimeline({
     selectors: '#arguments .title',
 
-    animatedProperties: {
+    properties: {
       transform: ['translateY(350%)', 'translateY(0)'],
       opacity: ['0', '1'],
     },
 
-    animateSettings: {
+    settings: {
       timeline: argsTimeline,
       timeRange: 'cover 0% 30%',
-    }
+    },
   }),
 
-  new AnimationTimeline({
+  //? Arguments main
+  new TypedAnimationTimeline({
     selectors: '#argument-pc-left',
 
-    animatedProperties: {
+    properties: {
       transform: ['translateX(-15vw)', 'translateX(0px)'],
     },
 
-    animateSettings: {
+    settings: {
       timeline: argsMainTimeline,
       timeRange: 'cover 0% 30%',
+    },
+    breakpoints: {
+      1100: { disable: true }
     }
-  },
-    new AnimationTimelineMediaQuery({
-      activationWidth: 1100,
-      properties: {
-        transform: ['translateX(0)', 'translateX(0)']
-      },
-      settings: {
-        timeline: argsMainTimeline,
-      }
-    })
-  ),
-  new AnimationTimeline({
+  }),
+  new TypedAnimationTimeline({
     selectors: '#argument-pc-right',
 
-    animatedProperties: {
+    properties: {
       transform: ['translateX(15vw)', 'translateX(0px)'],
     },
 
-    animateSettings: {
+    settings: {
       timeline: argsMainTimeline,
       timeRange: 'cover 0% 30%',
+    },
+    breakpoints: {
+      1100: { disable: true }
     }
-  },
-    new AnimationTimelineMediaQuery({
-      activationWidth: 1100,
-      properties: {
-        transform: ['translateX(0)', 'translateX(0)']
-      },
-      settings: {
-        timeline: argsMainTimeline,
-      }
-    })
-  ),
-  new AnimationTimeline({
+  }),
+  new TypedAnimationTimeline({
     selectors: '#argument-pc-center',
 
-    animatedProperties: {
+    properties: {
       transform: ['translateY(10vw)', 'translateY(0px)'],
     },
 
-    animateSettings: {
+    settings: {
       timeline: argsMainTimeline,
       timeRange: 'cover 0% 30%',
+    },
+    breakpoints: {
+      1100: { disable: true }
     }
-  },
-    new AnimationTimelineMediaQuery({
-      activationWidth: 1100,
-      properties: {
-        transform: ['translateY(0)', 'translateY(0)']
-      },
-      settings: {
-        timeline: argsMainTimeline,
-      }
-    })
-  ),
+  }),
 )
