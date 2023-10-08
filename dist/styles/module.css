@@ -91,7 +91,7 @@
   font-family: var(--lexend-deca-font);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
   .m-hero .text {
     position: relative;
@@ -99,7 +99,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
   .m-hero .get-button {
     transform: translate3d(80px, 0, 0)
@@ -139,7 +139,7 @@
   left: -5%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
   .m-hero .arrow_tablets {
     display: none
@@ -193,6 +193,7 @@
     align-items: center;
     justify-content: center;
     height: calc(100svh - var(--header-mobile-height));
+    min-height: 500px;
     background-position: right
   }
 }

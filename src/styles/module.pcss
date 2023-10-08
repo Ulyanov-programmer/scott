@@ -94,14 +94,14 @@
     max-width: 400px;
     font-family: var(--lexend-deca-font);
 
-    @media (width >= 768px) {
+    @media (width > 768px) {
       position: relative;
       transform: translateX(80px);
     }
   }
 
   & .get-button {
-    @media (width >= 768px) {
+    @media (width > 768px) {
       transform: translate3d(80px, 0, 0);
     }
   }
@@ -131,7 +131,7 @@
       top: 67%;
       left: -5%;
 
-      @media (width >= 768px) {
+      @media (width > 768px) {
         display: none;
       }
 
@@ -171,6 +171,7 @@
     justify-content: center;
 
     height: calc(100svh - var(--header-mobile-height));
+    min-height: 500px;
 
     background-position: right;
   }
