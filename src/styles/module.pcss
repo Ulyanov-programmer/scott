@@ -74,29 +74,41 @@
 
   overflow-x: hidden;
   overflow-y: hidden;
-  display: grid;
+  display: flex;
+  flex-flow: column nowrap;
   gap: 40px;
-  justify-items: start;
+  align-items: start;
+  justify-content: center;
 
+  height: calc(100vh - var(--header-height) + 15px);
+  min-height: 500px;
   padding-block: clamp(100px, pxToVw(150, $layoutWidth), 150px);
 
   background: bgImageMultiType("../img/decor/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  align-items: start;
 
   & .title {
     min-height: 2em;
+
+    @media (width > 768px) {
+      font-size: pxRem(56px);
+    }
   }
 
   & .text {
+    position: relative;
     max-width: 400px;
     font-family: var(--lexend-deca-font);
 
     @media (width > 768px) {
       position: relative;
       transform: translateX(80px);
+    }
+
+    @media (width > 768px) {
+      font-size: pxRem(15px);
     }
   }
 
@@ -112,10 +124,10 @@
 
   & .circles {
     right: 0;
-    bottom: 24%;
+    bottom: 15%;
 
     @media (--isTablet) {
-      bottom: 5%;
+      bottom: 7.5%;
     }
 
     @media (width < 550px) {
@@ -124,11 +136,11 @@
   }
 
   & .arrow {
-    top: 50%;
+    top: 45%;
     left: 110%;
 
     &_tablets {
-      top: 67%;
+      bottom: 5%;
       left: -5%;
 
       @media (width > 768px) {
@@ -146,11 +158,11 @@
   }
 
   & .line {
-    top: 55%;
-    left: 0;
+    top: 45%;
+    right: 105%;
 
     img {
-      width: 13vw;
+      width: 50vw;
     }
 
     @media (--isTablet), (--isMobile) {
@@ -158,22 +170,23 @@
     }
   }
 
-  @media (--isTablet), (--isMobile) {
-    justify-items: center;
+  @media (--isMobile), (--isTablet) {
+    align-items: center;
     padding-bottom: 150px;
     text-align: center;
   }
 
   @media (--isMobile) {
-    display: flex;
-    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
 
     height: calc(100svh - var(--header-mobile-height));
+
     min-height: 500px;
 
-    background-position: right;
+    text-align: center;
+
+    background-position: 95%;
   }
 }
 
@@ -190,9 +203,11 @@
     &:nth-child(1) {
       z-index: 2;
     }
+
     &:nth-child(2) {
       z-index: 1;
     }
+
     &:nth-child(3) {
       z-index: 0;
     }

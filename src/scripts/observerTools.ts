@@ -69,7 +69,7 @@ new ObserverTools(
     }
   }),
 
-  // ? First section
+  // ? First styled section
   new TypedAnimationTimeline({
     selectors: '#first-styled-section .title',
 
@@ -122,7 +122,7 @@ new ObserverTools(
     },
   }),
 
-  // ? Second section
+  // ? Second styled section
   new TypedAnimationTimeline({
     selectors: '#second-styled-section .m-button',
 
@@ -175,7 +175,7 @@ new ObserverTools(
     },
   }),
 
-  // ? Tried section
+  // ? Tried styled section
   new TypedAnimationTimeline({
     selectors: '#tried-styled-section .title',
 

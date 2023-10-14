@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
 
+  height: var(--header-height);
   padding: 20px 0;
 
   background: var(--background);
@@ -23,20 +24,28 @@
       display: none;
     }
   }
+
+  @media (width <= 768px) {
+    --header-height: 65px;
+  }
 }
+
 .l-footer {
   color: var(--snow-color);
 
   & .top {
     position: relative;
+    z-index: 0;
+
     display: flex;
     flex-flow: row wrap;
+    gap: 50px;
     align-items: center;
     justify-content: space-between;
-    z-index: 0;
-    gap: 50px;
-    background: #495567;
+
     padding-block: clamp(30px, pxToVw(100, $layoutWidth), 102px);
+
+    background: #495567;
 
     @media (--isTablet) {
       flex-flow: column nowrap;
@@ -44,6 +53,7 @@
       justify-content: center;
       text-align: center;
     }
+
     @media (--isMobile) {
       flex-flow: column nowrap;
       gap: 30px;
@@ -58,8 +68,8 @@
   & .download-refs {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
 
     a {
       transition: all 0.3s ease;
@@ -74,19 +84,20 @@
   & .bottom {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
     gap: 40px;
+    justify-content: center;
+
+    padding-block: 25px;
 
     background: #333a44;
-    padding-block: 25px;
   }
 
   & .socials {
     display: flex;
     flex-flow: row nowrap;
+    gap: 24px;
     align-items: center;
     justify-content: center;
-    gap: 24px;
   }
 
   & .social {
@@ -94,10 +105,12 @@
   }
 
   & .decor {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    object-fit: contain;
     pointer-events: none;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    object-fit: contain;
   }
 }
