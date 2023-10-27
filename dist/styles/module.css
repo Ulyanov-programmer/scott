@@ -70,23 +70,34 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
-  display: grid;
+  display: flex;
+  flex-flow: column nowrap;
   gap: 40px;
-  justify-items: start;
+  align-items: flex-start;
+  justify-content: center;
+  height: calc(100vh - var(--header-height) + 15px);
+  min-height: 500px;
   padding-block: clamp(100px, calc(150 * 100vw / 1440), 150px);
   background: -webkit-image-set(url("../img/decor/hero-bg.jpg") 1x, url("../img/decor/hero-bg.webp") 1x, url("../img/decor/hero-bg.avif") 1x);
   background: image-set(url("../img/decor/hero-bg.jpg") 1x, url("../img/decor/hero-bg.webp") 1x, url("../img/decor/hero-bg.avif") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  align-items: start;
 }
 
 .m-hero .title {
   min-height: 2em;
 }
 
+@media (min-width: 769px) {
+
+  .m-hero .title {
+    font-size: 3.5rem
+  }
+}
+
 .m-hero .text {
+  position: relative;
   max-width: 400px;
   font-family: var(--lexend-deca-font);
 }
@@ -96,6 +107,13 @@
   .m-hero .text {
     position: relative;
     transform: translateX(80px)
+  }
+}
+
+@media (min-width: 769px) {
+
+  .m-hero .text {
+    font-size: 0.9375rem
   }
 }
 
@@ -112,13 +130,13 @@
 
 .m-hero .circles {
   right: 0;
-  bottom: 24%;
+  bottom: 15%;
 }
 
 @media (min-width: 426px) and (max-width: 769px) {
 
   .m-hero .circles {
-    bottom: 5%
+    bottom: 7.5%
   }
 }
 
@@ -130,12 +148,12 @@
 }
 
 .m-hero .arrow {
-  top: 50%;
+  top: 45%;
   left: 110%;
 }
 
 .m-hero .arrow_tablets {
-  top: 67%;
+  bottom: 5%;
   left: -5%;
 }
 
@@ -161,12 +179,12 @@
 }
 
 .m-hero .line {
-  top: 55%;
-  left: 0;
+  top: 45%;
+  right: 105%;
 }
 
 .m-hero .line img {
-  width: 13vw;
+  width: 50vw;
 }
 
 @media (min-width: 426px) and (max-width: 769px),(max-width: 426px) {
@@ -176,10 +194,10 @@
   }
 }
 
-@media (min-width: 426px) and (max-width: 769px),(max-width: 426px) {
+@media (max-width: 426px),(min-width: 426px) and (max-width: 769px) {
 
   .m-hero {
-    justify-items: center;
+    align-items: center;
     padding-bottom: 150px;
     text-align: center
   }
@@ -188,45 +206,86 @@
 @media (max-width: 426px) {
 
   .m-hero {
-    display: flex;
-    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     height: calc(100svh - var(--header-mobile-height));
     min-height: 500px;
-    background-position: right
+    text-align: center;
+    background-position: 95%
   }
 }
 
-.m-steps {
-  overflow-x: hidden;
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 30px;
+.animation-block {
+  display: grid;
+  align-items: center;
 }
 
-.m-steps .item {
-  position: relative;
+@media (min-width: 769px) {
+
+  .animation-block {
+    overflow: hidden;
+    position: sticky;
+    top: var(--header-height);
+    height: calc(100vh - var(--header-height))
+  }
 }
 
-/* ? It is necessary that the decorative lines do not overlap the icons. */
+@media (min-width: 426px) and (max-width: 769px) {
+
+  .m-steps {
+    overflow: hidden
+  }
+}
+
+.m-steps .animation-block {
+  gap: 25px;
+  justify-content: space-between;
+}
+
+@media (min-width: 769px) {
+
+  .m-steps .animation-block {
+    grid-template-columns: 1fr 1fr 1fr
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+
+  .m-steps .animation-block {
+    gap: 75px
+  }
+}
 
 .m-steps .item:nth-child(1) {
-  z-index: 2;
+  z-index: 3;
 }
 
 .m-steps .item:nth-child(2) {
-  z-index: 1;
+  z-index: 2;
 }
 
 .m-steps .item:nth-child(3) {
-  z-index: 0;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+
+  .m-steps .item {
+    opacity: 0
+  }
+}
+
+@media (min-width: 769px) {
+
+  .m-steps {
+    height: 300vh
+  }
 }
 
 @media (min-width: 426px) and (max-width: 769px),(max-width: 426px) {
 
   .m-steps {
-    flex-flow: column nowrap
+    padding-top: clamp(120px, calc(150 * 100vw / 1440), 150px)
   }
 }
 
@@ -234,6 +293,7 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 25px;
+  align-items: center;
 }
 
 .m-step .decor {
@@ -250,20 +310,12 @@
   position: absolute;
   z-index: -1;
   top: 50%;
-  right: 100%;
-  transform: translate3d(0%, -50%, 0);
+  right: 50%;
+  transform-origin: center right;
+  transform: rotate(90deg);
   width: 1000px;
   height: 15px;
   background: #e5ecf4;
-}
-
-@media (min-width: 426px) and (max-width: 769px) {
-
-  .m-step .decor::before {
-    right: 50%;
-    transform-origin: center right;
-    transform: rotate(90deg)
-  }
 }
 
 @media (max-width: 426px) {
@@ -293,12 +345,21 @@
   font-family: var(--lexend-deca-font);
 }
 
+@media (min-width: 769px) {
+
+  .m-step {
+    max-width: 30vw;
+    text-align: center
+  }
+}
+
 @media (min-width: 426px) and (max-width: 769px) {
 
   .m-step {
     display: grid;
     grid-template: "decor title" auto "decor text" auto / 96px 1fr;
-    gap: 25px 60px
+    gap: 10px 50px;
+    align-content: start
   }
 }
 
@@ -308,13 +369,14 @@
     display: grid;
     grid-template: "decor" auto "title" auto "text" auto / 1fr;
     gap: 25px;
-    justify-items: center
+    justify-items: center;
+    text-align: center
   }
 }
 
 .m-styled-section {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .m-styled-section .body {

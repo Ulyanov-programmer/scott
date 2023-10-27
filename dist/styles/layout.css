@@ -1,12 +1,13 @@
 .l-header {
   position: sticky;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   display: flex;
   flex-flow: row nowrap;
   gap: clamp(20px, calc(50 * 100vw / 1440), 60px);
   align-items: center;
   justify-content: space-between;
+  height: var(--header-height);
   padding: 20px 0;
   background: var(--background);
   box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
@@ -23,20 +24,27 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  .l-header {
+    --header-height: 65px
+  }
+}
+
 .l-footer {
   color: var(--snow-color);
 }
 
 .l-footer .top {
   position: relative;
+  z-index: 0;
   display: flex;
   flex-flow: row wrap;
+  gap: 50px;
   align-items: center;
   justify-content: space-between;
-  z-index: 0;
-  gap: 50px;
-  background: #495567;
   padding-block: clamp(30px, calc(100 * 100vw / 1440), 102px);
+  background: #495567;
 }
 
 @media (min-width: 426px) and (max-width: 769px) {
@@ -65,8 +73,8 @@
 .l-footer .download-refs {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
 }
 
 .l-footer .download-refs a {
@@ -81,18 +89,18 @@
 .l-footer .bottom {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   gap: 40px;
-  background: #333a44;
+  justify-content: center;
   padding-block: 25px;
+  background: #333a44;
 }
 
 .l-footer .socials {
   display: flex;
   flex-flow: row nowrap;
+  gap: 24px;
   align-items: center;
   justify-content: center;
-  gap: 24px;
 }
 
 .l-footer .social {
@@ -100,10 +108,10 @@
 }
 
 .l-footer .decor {
+  pointer-events: none;
   position: absolute;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   -o-object-fit: contain;
   object-fit: contain;
-  pointer-events: none;
 }

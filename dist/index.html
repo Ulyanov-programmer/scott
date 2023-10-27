@@ -16,23 +16,23 @@
     <link as="font" crossorigin="" href="./fonts/SpaceMono-Bold.woff2" rel="preload" type="font/woff2">
     <title>Scott</title>
     <!-- /-/ General stylesheets -->
-    <link href="./styles/general/fonts.css?_v=20231008120743" rel="stylesheet">
-    <link href="./styles/animations.css?_v=20231008120743" rel="stylesheet">
-    <link href="./styles/base.css?_v=20231008120743" rel="stylesheet">
-    <link href="./styles/layout.css?_v=20231008120743" rel="stylesheet">
-    <link href="./styles/module.css?_v=20231008120743" rel="stylesheet">
-    <link href="./styles/state.css?_v=20231008120743" rel="stylesheet">
-    <link href="./styles/theme.css?_v=20231008120743" rel="stylesheet">
+    <link href="./styles/general/fonts.css" rel="stylesheet">
+    <link href="./styles/animations.css" rel="stylesheet">
+    <link href="./styles/base.css" rel="stylesheet">
+    <link href="./styles/layout.css" rel="stylesheet">
+    <link href="./styles/module.css" rel="stylesheet">
+    <link href="./styles/state.css" rel="stylesheet">
+    <link href="./styles/theme.css" rel="stylesheet">
     <!-- /-/ General scripts -->
     <!-- Typed -->
-    <script defer src="./libs/typed.min.js?_v=20231008120743"></script>
-    <script defer src="./scripts/typed.js?_v=20231008120743"></script>
+    <script defer src="./libs/typed.min.js"></script>
+    <script defer src="./scripts/typed.js"></script>
     <!-- BurgerMenu -->
-    <script src="./scripts/burgerMenu.js?_v=20231008120743" type="module"></script>
-    <link href="./styles/modules/burgerMenu.css?_v=20231008120743" rel="stylesheet">
+    <script src="./scripts/burgerMenu.js" type="module"></script>
+    <link href="./styles/modules/burgerMenu.css" rel="stylesheet">
     <!-- /-/ Other stylesheets and scripts for this page -->
-    <script defer src="./scripts/scripts.js?_v=20231008120743"></script>
-    <script src="./scripts/observerTools.js?_v=20231008120743" type="module"></script>
+    <script defer src="./scripts/scripts.js"></script>
+    <script src="./scripts/observerTools.js" type="module"></script>
   </head>
   <body class="is-hidden-scrollbar">
     <header class="l-header is-centered-content">
@@ -97,6 +97,9 @@
           <div class="arrow decor" data-animation-to-top="">
             <img alt="" height="151" src="img/decor/arrow-right.svg" width="355">
           </div>
+          <div class="line decor" data-animation-to-top="">
+            <img alt="" height="15" src="img/decor/line.svg" width="203">
+          </div>
         </div>
         <button class="get-button m-button" data-animation-to-top="" type="button">Get Scootin</button>
         <div class="circles decor">
@@ -105,38 +108,37 @@
         <div class="arrow_tablets decor" data-animation-to-top="">
           <img alt="" height="151" src="img/decor/arrow-right_tablets.svg" width="325">
         </div>
-        <div class="line decor" data-animation-to-top="">
-          <img alt="" height="15" src="img/decor/line.svg" width="203">
-        </div>
       </section>
-      <section class="m-steps is-centered-content is-top-paddings">
-        <article class="m-step item is-step-1">
-          <div class="decor is-contain-img">
-            <img alt="" height="96" loading="lazy" src="img/decor/step-1.svg" width="96">
-          </div>
-          <h2 class="title">Locate with app</h2>
-          <p class="text">
-            Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away.
-          </p>
-        </article>
-        <article class="m-step item is-step-2">
-          <div class="decor is-contain-img">
-            <img alt="" height="96" loading="lazy" src="img/decor/step-2.svg" width="96">
-          </div>
-          <h2 class="title">Pick your scooter</h2>
-          <p class="text">
-            Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away.
-          </p>
-        </article>
-        <article class="m-step item is-step-3">
-          <div class="decor is-contain-img">
-            <img alt="" height="96" loading="lazy" src="img/decor/step-3.svg" width="96">
-          </div>
-          <h2 class="title">Enjoy the ride</h2>
-          <p class="text">
-            Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away.
-          </p>
-        </article>
+      <section class="m-steps is-centered-content">
+        <div class="animation-block">
+          <article class="m-step item is-step-1" id="step-one">
+            <div class="decor is-contain-img">
+              <img alt="" height="96" loading="lazy" src="img/decor/step-1.svg" width="96">
+            </div>
+            <h2 class="title">Locate with app</h2>
+            <p class="text">
+              Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away.
+            </p>
+          </article>
+          <article class="m-step item is-step-3" id="step-two">
+            <div class="decor is-contain-img">
+              <img alt="" height="96" loading="lazy" src="img/decor/step-3.svg" width="96">
+            </div>
+            <h2 class="title">Enjoy the ride</h2>
+            <p class="text">
+              Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away.
+            </p>
+          </article>
+          <article class="m-step item is-step-2" id="step-three">
+            <div class="decor is-contain-img">
+              <img alt="" height="96" loading="lazy" src="img/decor/step-2.svg" width="96">
+            </div>
+            <h2 class="title">Pick your scooter</h2>
+            <p class="text">
+              Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away.
+            </p>
+          </article>
+        </div>
       </section>
       <section class="m-styled-section is-top-paddings" id="first-styled-section">
         <div class="body is-centered-content">
@@ -149,7 +151,7 @@
             <a class="m-button ref" href="#" target="_self">Learn More</a>
           </div>
           <div class="decor-image is-contain-img">
-            <picture><source srcset="img/decor/decor-image-1.avif" type="image/avif"><source srcset="img/decor/decor-image-1.webp" type="image/webp"><img alt="" height="668" loading="lazy" src="img/decor/decor-image-1.png" width="668"></picture>
+            <img alt="" height="668" loading="lazy" src="img/decor/decor-image-1.png" width="668">
           </div>
           <div class="decor-circle is-contain-img">
             <img alt="" height="445" loading="lazy" src="img/decor/decor-circle.svg" width="95">
@@ -162,10 +164,10 @@
       <section class="m-styled-section is-top-paddings m-styled-section_reverse" id="second-styled-section">
         <div class="body is-centered-content">
           <div class="decor-image is-contain-img">
-            <picture><source srcset="img/decor/decor-image-2.avif" type="image/avif"><source srcset="img/decor/decor-image-2.webp" type="image/webp"><img alt="" height="890" loading="lazy" src="img/decor/decor-image-2.png" width="890"></picture>
+            <img alt="" height="890" loading="lazy" src="img/decor/decor-image-2.png" width="890">
           </div>
           <div class="decor-circle is-contain-img">
-            <img alt="" aria-label="al" height="445" loading="lazy" src="img/decor/decor-circle-left.svg" width="101">
+            <img alt="" aria-label="" height="445" loading="lazy" src="img/decor/decor-circle-left.svg" width="101">
           </div>
           <div class="decor-arrow">
             <img alt="" height="151" loading="lazy" src="img/decor/arrow-right.svg" width="355">
@@ -180,7 +182,7 @@
           </div>
         </div>
       </section>
-      <section class="m-styled-section is-block-paddings" id="tried-styled-section">
+      <section class="m-styled-section is-block-paddings" id="third-styled-section">
         <div class="body is-centered-content">
           <div class="main">
             <h2 class="title">Zero hassle payments</h2>
@@ -191,7 +193,7 @@
             <a class="m-button ref" href="#" target="_self">Learn More</a>
           </div>
           <div class="decor-image is-contain-img">
-            <picture><source srcset="img/decor/decor-image-3.avif" type="image/avif"><source srcset="img/decor/decor-image-3.webp" type="image/webp"><img alt="" height="622" loading="lazy" src="img/decor/decor-image-3.png" width="622"></picture>
+            <img alt="" height="622" loading="lazy" src="img/decor/decor-image-3.png" width="622">
           </div>
           <div class="decor-circle is-contain-img">
             <img alt="" height="445" loading="lazy" src="img/decor/decor-circle.svg" width="95">
